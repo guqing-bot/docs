@@ -85,6 +85,9 @@
       "href": "https://dashboard.mintlify.com"
     }
   },
+  "icons": {
+    "library": "fontawesome"
+  },
   "contextual": {
     "options": [
      "copy",
