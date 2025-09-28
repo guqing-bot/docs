@@ -69,8 +69,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/jumpserver-wordmark-light.svg",
+    "dark": "/images/jumpserver-wordmark-dark.svg"
   },
   "navbar": {
     "links": [
@@ -86,7 +86,7 @@
     }
   },
   "icons": {
-    "library": "fontawesome"
+    "library": "lucide"
   },
   "contextual": {
     "options": [
