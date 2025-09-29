@@ -88,6 +88,15 @@
   "icons": {
     "library": "lucide"
   },
+  "background": {
+    "image": {
+      "light": "/background.png",
+      "dark": "/background-dark.png"
+    }
+  },
+  "thumbnails": {
+    "background": "/background-thub.png"
+  },
   "contextual": {
     "options": [
      "copy",
