@@ -1,3 +1,7 @@
+---
+title: "1"
+---
+
 # React
 
 > Build interactive and reusable elements with React components
@@ -143,7 +147,6 @@ export const Counter = () => {
     </div>;
 };
 
-
 The counter renders as an interactive React component.
 
 <Counter />
@@ -158,7 +161,7 @@ This example declares a `ColorGenerator` component that uses multiple React hook
 
 Create `color-generator.jsx` file in the `snippets` folder:
 
-```mdx /snippets/color-generator.jsx [expandable]
+```mdx /snippets/color-generator.jsx expandable
 export const ColorGenerator = () => {
   const [hue, setHue] = useState(180)
   const [saturation, setSaturation] = useState(50)
@@ -289,15 +292,14 @@ The color generator renders as an interactive React component.
   <Accordion title="Client-side rendering impact">
     React hook components render on the client-side, which has several implications:
 
-    * **SEO**: Search engines might not fully index dynamic content.
-    * **Initial load**: Visitors may experience a flash of loading content before components render.
-    * **Accessibility**: Ensure dynamic content changes are announced to screen readers.
+    - **SEO**: Search engines might not fully index dynamic content.
+    - **Initial load**: Visitors may experience a flash of loading content before components render.
+    - **Accessibility**: Ensure dynamic content changes are announced to screen readers.
   </Accordion>
-
   <Accordion title="Performance best practices">
-    * **Optimize dependency arrays**: Include only necessary dependencies in your `useEffect` dependency arrays.
-    * **Memoize complex calculations**: Use `useMemo` or `useCallback` for expensive operations.
-    * **Reduce re-renders**: Break large components into smaller ones to prevent cascading re-renders.
-    * **Lazy loading**: Consider lazy loading complex components to improve initial page load time.
+    - **Optimize dependency arrays**: Include only necessary dependencies in your `useEffect` dependency arrays.
+    - **Memoize complex calculations**: Use `useMemo` or `useCallback` for expensive operations.
+    - **Reduce re-renders**: Break large components into smaller ones to prevent cascading re-renders.
+    - **Lazy loading**: Consider lazy loading complex components to improve initial page load time.
   </Accordion>
 </AccordionGroup>
