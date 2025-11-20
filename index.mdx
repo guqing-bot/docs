@@ -1,97 +1,79 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Configuration"
 ---
 
-## Setting up
+This topic describes the configuration options in the config.txt file. 
+The default location of the file is: 
+```
+/opt/jumpserver/config/config.txt
+```
 
-Get your documentation site up and running in minutes.
+<Note>
+After changing any configuration, run `jmsctl restart` to apply the changes.
+</Note>
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+<ParamField path="SECRET_KEY" type="string">
+  Default: `A randomly generated 48-character`
 
-## Make it yours
+  Used to encrypt sensitive information, such as asset account passwords.
 
-Design a docs site that looks great and empowers your users.
+  Keep the SECRET_KEY same as the old environment during migration. Do not share it with anyone.
+</ParamField>
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+<ParamField path="BOOTSTRAP_TOKEN" type="string">
+  Default: `A randomly generated 24-character`
 
-## Create beautiful pages
+  Used for registration of components such as KoKo, Lion, Magnus, etc.
 
-Everything you need to create world-class documentation.
+  Keep the BOOTSTRAP_TOKEN same as the old environment during migration. Do not share it with anyone.
+</ParamField>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+<ParamField path="DEBUG" type="boolean">
+  Default: `false`
 
-## Need inspiration?
+  Debug mode shows detailed error pages with full tracebacks and environment info when exceptions occur.
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+  Never enable DEBUG in the production environment for a long time.
+</ParamField>
+
+<ParamField path="DEBUG_DEV" type="boolean">
+  Default: `false`
+
+  Debug Dev mode shows more detailed information in log files.
+
+  Never enable DEBUG_DEV in the production environment for a long time.
+</ParamField>
+
+<ParamField path="DEBUG_ANSIBLE" type="boolean">
+  Default: `false`
+
+  Debug Ansible mode shows more detailed information during task execution.
+
+  Never enable DEBUG_ANSIBLE in the production environment for a long time.
+</ParamField>
+
+<ParamField path="LOG_LEVEL" type="string">
+  Default: `ERROR`
+
+  Control the display of log information at different levels.
+
+  * `DEBUG`: Low level system information for debugging purposes.
+  * `INFO`: General system information.
+  * `WARNING`: Information describing a minor problem that has occurred.
+  * `ERROR`: Information describing a major problem that has occurred.
+  * `CRITICAL`: Information describing a critical problem that has occurred.
+</ParamField>
+
+<ParamField path="USER_DEFAULT_EXPIRED_DAYS" type="number">
+  Default: `25550`
+
+  Default expiration days for a user. When creating a user, the "Date expired" is automatically calculated based on this setting.
+</ParamField>
+
+<ParamField path="SECURITY_VIEW_AUTH_NEED_MFA" type="boolean">
+  Default: `true`
+
+  By default, MFA verification is mandatory when administrators view an asset account's secret.
+
+  For more information about configuring the MFA verification validity period, see [MFA verify TTL](/docs/security/auth-security#mfa-verify-ttl).
+</ParamField>
