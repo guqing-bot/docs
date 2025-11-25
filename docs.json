@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "ora",
+  "theme": "mint",
   "name": "Poetora Starter Kit",
   "colors": {
     "primary": "#16A34A",
@@ -20,6 +20,7 @@
             "group": "Getting started",
             "pages": [
               "index",
+              "test",
               "quickstart",
               "development"
             ]
