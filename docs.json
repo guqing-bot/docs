@@ -12,6 +12,14 @@
     "dark": "/logo/dark.svg"
   },
   "navigation": {
+    "global": {
+      "languages": [{
+        "href": "path:/zh",
+        "language": "zh",
+        "default": true,
+        "hidden": true
+      }]
+    },
     "tabs": [
       {
         "tab": "Guides",
